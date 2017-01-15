@@ -1,0 +1,2 @@
+# rabbitinit
+Init new project
