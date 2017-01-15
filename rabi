@@ -1,0 +1,40 @@
+#!/bin/bash
+#-*- mode: shell-script -*-
+#-*- coding: utf-8 -*-
+
+URL='https://raw.githubusercontent.com/rabbitlive/rabbitinit/master/'
+EDITORCONFIG='puclic/.editorconfig'
+BABELRC='public/.babelrc'
+
+
+function filepath {
+    echo "$URL$1"
+}
+
+function downloadPublic {
+    local editorconfig=$(filepath $EDITORCONFIG)
+    curl -O "$editorconfig" 
+}
+
+function main {
+    #downloadPublic
+    echo $1
+
+    while getopts :12345 OPT; do
+	case $OPT in
+	    1|+1)
+		echo "a"
+	    ;;
+	    2|2+)
+		echo "b"
+	    ;;
+	    *)
+		echo "usage: `basename $0` [+-$1} [--] ARGS..."
+		exit 2
+	esac
+    done
+    shift `expr $OPTIND - 1`
+    OPTIND=1
+}
+
+main $*

@@ -1,0 +1,55 @@
+* wxapp微信小程序
+
+** 目录结构
+
+#+BEGIN_SRC
+/root
+  |- /src
+       |- /reducers
+            |- example.js
+	    |- index.js
+       |- /actions
+            |- example.js
+       |- /store
+            |- configureStore.js
+	    |- configureStore.dev.js
+	    |- configureStore.prod.js
+       |- /middlewaves
+            |- example.js
+       |- /utils
+            |- example.js
+       |- /lib
+            |- redux.js
+	    |- wechat-redux.js
+       |- /pages
+            |- /foo
+	        |- foo.js
+		|- foo.wxss
+		|- foo.wxml
+	    |- /bar
+	        |- bar.js
+		|- bar.json
+		|- bar.wxss
+		|- bar.wxml
+       |- app.js
+       |- app.json
+       |- app.wxss
+  |- /dist
+       |- /pages
+       |- /lib
+       |- /utils
+       |- core.js
+       |- app.js
+       |- app.json
+       |- app.wxss
+  |- /node_modules
+  |- /scripts
+  |- /config
+  |- .editorconfig
+  |- .babelrc
+  |- README.md
+  |- LICENSE
+  |- .gitignore
+  |- package.json
+  |- yarn.lock
+#+END_SRC
